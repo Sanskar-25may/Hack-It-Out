@@ -38,6 +38,7 @@ BASE_DIR = Path(__file__).resolve().parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 DOWNLOADS_DIR = BASE_DIR / "downloads"
 DOWNLOADS_DIR.mkdir(exist_ok=True)
+TEMPLATES_DIR.mkdir(exist_ok=True)
 
 # Serve templates as static HTML
 app.mount("/static", StaticFiles(directory=str(TEMPLATES_DIR)), name="static")
